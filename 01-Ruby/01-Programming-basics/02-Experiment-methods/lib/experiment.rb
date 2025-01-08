@@ -2,20 +2,30 @@
 # - One line of code for each method
 # - Just look in the doc for the right method of the String, Integer, and Array classes!
 
-def get_rid_of_surrounding_whitespaces(a_string)
+def get_rid_of_surrounding_whitespaces(a_string) #strip
   # TODO: return a copy of the string with leading and trailing whitespaces removed
   # example: get_rid_of_surrounding_whitespaces("  hey yo  ") => "hey yo"
+  return a_string.strip
 end
 
-def belongs_to?(a_string, a_word)
+puts get_rid_of_surrounding_whitespaces(" hey jude ") #include?
+
+def belongs_to?(a_string, a_word) #.include?
   # TODO: return true if a_string contains a_word
   # example: belongs_to?("hey jude", "jude") => true
+  return a_string.include?(a_word)
 end
 
-def replace(initial_string, old_letter, new_letter)
+puts belongs_to?("hola mundo", "mundo")
+puts belongs_to?("hola mundo", "adios")
+
+def replace(initial_string, old_letter, new_letter) #.gsub(pattern, replacement)
   # TODO: return a copy of the string with the new letter replacing the old one
   # example: replace("casanova", "a", "o") => "cosonovo"
+  return initial_string.gsub(old_letter, new_letter)
 end
+
+puts replace("Alfonso", "o", "a")
 
 def exactly_divide(an_integer, a_divider)
   # TODO: return division of an_integer by a_divider (computing the floating division, NOT the euclidean one)
